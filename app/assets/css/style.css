@@ -12,3 +12,28 @@ body {
 .catalog-img {
 	height: 130px;
 }
+
+/*MEDIA QUERIES*/
+
+/* Mobile */
+/*@media only screen and (max-width: 400px) {*/
+@media only screen and (max-width: 425px) {
+	body {
+		padding-bottom: 100px;
+	}
+}
+
+/* Tablet */
+/*@media only screen and (min-width: 401px) and (max-width: 960px) {*/
+@media only screen and (min-width: 426px) and (max-width: 960px) {
+	body {
+		padding-bottom: 50px;
+	}
+}
+
+/* Desktop */
+@media only screen and (min-width: 961px) {
+	body {
+		padding-bottom: 50px;
+	}
+}

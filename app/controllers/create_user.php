@@ -15,7 +15,7 @@
 	if(mysqli_num_rows($result) > 0) {
 		die("failed");
 	} else {
-		$sql_insert = "INSERT INTO users (firstname, lastname, username, password, email, address) VALUES ('$firstname', '$lastname', '$username', '$password', '$email', '$address')";
+		$sql_insert = "INSERT INTO users (firstname, lastname, username, password, email, address, roles_id) VALUES ('$firstname', '$lastname', '$username', '$password', '$email', '$address', '2')";
 		$result_insert = mysqli_query($conn, $sql_insert);
 	}
 

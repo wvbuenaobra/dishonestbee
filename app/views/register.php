@@ -56,7 +56,7 @@
 				    	<small class="text-danger"></small>
 				  	</div>
 				  	<div class="form-group">
-				  		<button type="button" id="registerBtn" class="btn w-100">Submit</button>
+				  		<button type="button" id="registerBtn" class="btn btn-secondary w-100">Submit</button>
 				  		<p class="text-right"><small>Already have an account? <a href="./login.php">Login</a></small></p>
 				  	</div>
 				</form>

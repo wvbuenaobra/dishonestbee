@@ -6,6 +6,11 @@
 
 <?php function get_page_content() { 
 
+	//redirect to error page if ADMIN
+	if(isset($_SESSION['user']) && $_SESSION['user']['roles_id'] == 1){
+		header("Location: ./error.php");
+	}
+
 	require_once '../controllers/connect.php';
 	global $conn;
 
@@ -75,7 +80,7 @@
 
 									<!-- add to cart -->
 									<div class="card-footer">
-										<input type="number" class="form-control mb-1" name="cartnum" id="cartnum" value="1">
+										<input type="number" class="form-control mb-1" name="cartnum" id="cartnum" value="1" min="0">
 										<button type="submit" class="btn btn-block btn-outline-primary add-to-cart btn-sm" data-id="<?php echo $item['id'] ?>">Add to Cart</button>
 									</div>
 
