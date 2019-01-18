@@ -180,8 +180,13 @@ if($payment_mode_id == 1) { //for COD
 
     $redirectUrls = new RedirectUrls();
     $redirectUrls
-        ->setReturnUrl('http://localhost/batch19/capstone2/app/controllers/pay.php?success=true')
-        ->setCancelUrl('http://localhost/batch19/capstone2/app/controllers/pay.php?success=false');
+        ->setReturnUrl('https://dishonestbee.herokuapp.com/app/controllers/pay.php?success=true')
+        ->setCancelUrl('https://dishonestbee.herokuapp.com/app/controllers/pay.php?success=false');
+        //(live)
+
+        //local
+        // ->setReturnUrl('http://localhost/batch19/capstone2/app/controllers/pay.php?success=true')
+        // ->setCancelUrl('http://localhost/batch19/capstone2/app/controllers/pay.php?success=false');
 
     $payment = new Payment();
     $payment->setIntent('sale')
