@@ -20,7 +20,7 @@
 		<div class="row">
 
 			<div class="col-sm-8 offset-sm-2">
-				<form action="../controllers/process_add_item.php" method="POST" enctype="multipart/form-data">
+				<form action="../controllers/process_add_item.php" method="POST" enctype="multipart/form-data" id="addItemForm">
 					
 					<div class="pt-4">
 						<h1>Add New Item</h1>
@@ -63,7 +63,7 @@
 						<input type="file" name="image" id="image" class="form-control" required>
 					</div>
 
-					<button type="submit" class="btn btn-primary">Add New Item</button>
+					<button type="button" id="btnAddItem" class="btn btn-primary">Add New Item</button>
 					<a href="./items.php"><button type="button" class="btn btn-danger">Cancel</button></a>
 
 				</form> <!-- end of form -->

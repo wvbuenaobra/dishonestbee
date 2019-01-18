@@ -76,6 +76,8 @@ $(document).ready( () => {
 	$('#registerBtn').click( (e) => {
 		if(validate_reg_form()){
 
+			$("#registerBtn").attr("disabled", true);
+
 			let username = $('#username').val();
 			let password = $('#password').val();
 			let firstname = $('#firstname').val();
@@ -97,6 +99,7 @@ $(document).ready( () => {
 				success: (data) => {
 					console.log(data);
 					if(data == "failed") {
+						$("#registerBtn").attr("disabled", false);
 						$("#username").next().html("Username already exists.");
 					} else {
 						alert("User data created successfully. You may now login.");
@@ -309,6 +312,23 @@ $(document).ready( () => {
 			$("#update_password_form").submit();
 			//**continue process of changing password (on /controller file)
 		}
+	});
+
+	//show order status
+	$("#showStatus").change( () => {
+		$("#showStatusForm").submit();
+	});
+
+	//add new item
+	$("#btnAddItem").click( () => {
+		$("#btnAddItem").attr("disabled", true);
+		$("#addItemForm").submit();
+	});
+
+	//place order on checkout
+	$("#btnPlaceOrder").click( () => {
+		$("#btnPlaceOrder").attr("disabled", true);
+		$("#formPlaceOrder").submit();
 	});
 
 }); //end of document ready

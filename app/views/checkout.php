@@ -20,7 +20,7 @@
 	}
 ?>
 
-	<form method="POST" action="../controllers/placeorder.php">
+	<form method="POST" action="../controllers/placeorder.php" id="formPlaceOrder">
 		<div class="container mt-4">
 
 			<div class="row">
@@ -38,13 +38,27 @@
 						<input type="text" class="form-control" name="addressLine1" value="<?php echo $_SESSION['user']['address'] ?>" readonly>
 					</div>
 				</div>
+				<div class="col-sm-4 my-2">
+					<h4>Payment Method</h4>
+					<div class="form-group">
+						<select name="payment_mode" id="payment_mode" class="form-control">
+							<?php
+							$payment_mode_query = "SELECT * FROM payment_modes";
+							$payment_modes = mysqli_query($conn, $payment_mode_query);
+							foreach($payment_modes as $payment_mode) {
+								extract($payment_mode);
+								echo "<option value='$id'>$name</option>";
+							} ?>
+						</select>
+					</div>
+				</div>
 			</div>
 
 			<h4>Order Summary:</h4>
 
 			<div class="row">
 				<div class="col-sm-6">
-					<h5>Total</h5>
+					<h5><strong>Total</strong></h5>
 				</div>
 				<div class="col-sm-6" id="total_price">
 					<?php
@@ -100,7 +114,7 @@
 				</div>
 			</div>
 
-			<button type="submit" class="btn btn-primary btn-block">Place Order Now</button>
+			<button type="button" id="btnPlaceOrder" class="btn btn-primary btn-block">Place Order Now</button>
 
 		</div> <!-- end of container -->
 	</form>
