@@ -310,7 +310,6 @@ $(document).ready( () => {
 	$("#update_password").click( () => {
 		if(validate_change_password()) {
 			$("#update_password_form").submit();
-			//**continue process of changing password (on /controller file)
 		}
 	});
 

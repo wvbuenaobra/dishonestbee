@@ -79,12 +79,12 @@
 								<h3>Change Password</h3>
 								<input type="text" class="form-control" name="user_id" value="<?php echo $_SESSION['user']['id'] ?>" hidden>
 
-								<label for="password">Password:</label>
-								<input type="password" class="form-control" name="password" id="password" placeholder="Enter new password (minimum of 8 chars)">
+								<label for="password">New Password:</label>
+								<input type="password" class="form-control" name="password" id="password" placeholder="Enter your new password (minimum of 8 chars)">
 								<small class="text-danger"></small><br>
 
-								<label for="confpassword">Confirm Password:</label>
-								<input type="password" class="form-control" id="confpassword" placeholder="Confirm new password">
+								<label for="confpassword">Confirm New Password:</label>
+								<input type="password" class="form-control" id="confpassword" placeholder="Confirm your new password">
 								<small class="text-danger"></small><br>
 
 								<button type="button" class="btn btn-primary mb-3" id="update_password">Submit New Password</button>

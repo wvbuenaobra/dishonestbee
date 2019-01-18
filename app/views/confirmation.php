@@ -33,7 +33,8 @@
                 <h3>Order Reference No.: <?php echo $_SESSION['new_txn_number']; ?></h3>
                 <?php unset($_SESSION['new_txn_number']); ?>
 
-                <p>Thank you for your purchase! Your transaction is being processed. We have also sent you an email about your order details.</p>
+                <p>Thank you for your purchase! Your transaction is being processed.</p>
+                <!-- We have also sent you an email about your order details. -->
 
                 <a class="btn btn-primary" href="./catalog.php">Go Back to Catalog</a>
                 <a class="btn btn-primary" href="./home.php">Go Back to Home</a>
