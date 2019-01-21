@@ -1,13 +1,17 @@
 <?php
 	$pageTitle = "Login";
 	$login_active = "active";
-	require_once '../partials/template.php';
+	require_once '../partials/template.php';	
 ?>
 
 <?php function get_page_content() { ?>
 
 	<div class="container">
 
+		<?php if(isset($_GET['error']) && $_GET['error'] == 1) { ?>
+			<p class="text-center pt-3">You must login to continue with this action. Not yet a member? Please <a href="./register.php">register</a>.</p>
+		<?php } ?>
+		
 		<div class="my-4">
 			<h3 class="text-center p-4 bg-dark text-light">Login</h3>
 		</div>

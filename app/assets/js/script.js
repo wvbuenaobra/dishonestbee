@@ -318,10 +318,49 @@ $(document).ready( () => {
 		$("#showStatusForm").submit();
 	});
 
+	function validate_item() {
+		let errors = 0;
+		let name = $('#name').val();
+		let price = $('#price').val();
+		let image = $('#image').val();
+
+		//name
+		if(name == ""){
+			$("#name").next().html("Please provide the item name.");
+			errors++;
+		} else {
+			$("#name").next().html("");
+		}
+
+		//price
+		if(price == ""){
+			$("#price").next().html("Please provide the item price.");
+			errors++;
+		} else {
+			$("#price").next().html("");
+		}
+
+		//image
+		if(image == ""){
+			$("#image").next().html("Please provide the item image.");
+			errors++;
+		} else {
+			$("#image").next().html("");
+		}
+
+		if(errors > 0) {
+			return false;
+		} else {
+			return true;
+		}
+	}
+
 	//add new item
 	$("#btnAddItem").click( () => {
-		$("#btnAddItem").attr("disabled", true);
-		$("#addItemForm").submit();
+		if(validate_item()) {
+			$("#btnAddItem").attr("disabled", true);
+			$("#addItemForm").submit();
+		}
 	});
 
 	//place order on checkout

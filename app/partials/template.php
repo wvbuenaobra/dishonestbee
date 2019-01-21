@@ -25,6 +25,9 @@
 
 	<!-- Bootstrap JS -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+
+	<!-- fav icon -->
+	<link rel="icon" type="image/gif/png" href="../assets/images/bee.png">
 </head>
 <body>
 	<?php

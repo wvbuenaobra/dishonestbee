@@ -8,7 +8,6 @@
 	
 	//if user is not logged in, will proceed to login page, as to safeguard from entering this address on the address bar
 	if(!isset($_SESSION['user'])) {
-		//**lagyan ng you must login to continue notice**
 		header("Location: ./login.php");
 	}
 

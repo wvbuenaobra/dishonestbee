@@ -87,15 +87,13 @@ if($payment_mode_id == 1) { //for COD
 	$mail = new PHPMailer(true); 
 	// Passing `true` enables exceptions
 
-	//**more editing on the body of the email**
-
 	$staff_email = 'dishonestbeeph@gmail.com';
 	$customer_email = $_SESSION['user']['email'];
 	$subject = 'Dishonest Bee - Order Confirmation';
 	$body = "
 	<div style='background-color:#ffc107;text-align:center;padding:10px;font-family: helvetica;'>
 		<h1>Dishonest Bee</h1>
-		<p>Asia's fastest-growing food and grocery service</p>
+		<p>The country's fastest-growing food service</p>
 	</div>
 	<br>
 	<div style='font-family: helvetica;'>Good day! Your order from Dishonest Bee is now being processed.<br>Here are your order details:</div>

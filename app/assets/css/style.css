@@ -13,6 +13,11 @@ body {
 	height: 130px;
 }
 
+.banner-img {
+	height: 180px;
+	width: 320px;
+}
+
 /*MEDIA QUERIES*/
 
 /* Mobile */

@@ -15,9 +15,9 @@
 			        <a class="nav-link" href="../views/home.php">Home <span class="sr-only">(current)</span></a>
 			    </li>
 
-			    <!-- CATALOG -->
+			    <!-- MENU, previously CATALOG -->
 			    <li class="nav-item <?php if(isset($catalog_active)) { echo $catalog_active; } ?>">
-			        <a class="nav-link" href="../views/catalog.php">Catalog</a>
+			        <a class="nav-link" href="../views/catalog.php">Menu</a>
 			    </li>
 
 			    <!-- CART -->

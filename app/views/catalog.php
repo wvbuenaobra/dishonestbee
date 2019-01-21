@@ -1,5 +1,5 @@
 <?php
-	$pageTitle = "Catalog";
+	$pageTitle = "Menu";
 	$catalog_active = "active";
 	require_once '../partials/template.php';
 ?>

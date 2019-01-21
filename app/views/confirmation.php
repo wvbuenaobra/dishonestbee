@@ -13,8 +13,7 @@
 
 	//if user is not logged in, will proceed to login page, as to safeguard from entering this address on the address bar
 	if(!isset($_SESSION['user'])) {
-		//**lagyan ng you must login to continue notice**
-		header("Location: ./login.php");
+		header("Location: ./login.php?error=1");
 	}
 ?>
 
@@ -36,7 +35,7 @@
                 <p>Thank you for your purchase! Your transaction is being processed.</p>
                 <!-- We have also sent you an email about your order details. -->
 
-                <a class="btn btn-primary" href="./catalog.php">Go Back to Catalog</a>
+                <a class="btn btn-primary" href="./catalog.php">Go Back to Menu</a>
                 <a class="btn btn-primary" href="./home.php">Go Back to Home</a>
             </div>
         </div>

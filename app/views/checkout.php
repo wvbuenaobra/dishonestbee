@@ -15,8 +15,7 @@
 
 	//if user is not logged in, will proceed to login page, else will continue to checkout page
 	if(!isset($_SESSION['user'])) {
-		//**lagyan ng you must login to continue notice**
-		header("Location: ./login.php");
+		header("Location: ./login.php?error=1");
 	}
 ?>
 

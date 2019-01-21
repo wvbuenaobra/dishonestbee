@@ -12,8 +12,6 @@
 	}
 
 	global $conn;
-
-	//**add form validation!!**
 ?>
 
 	<div class="container">
@@ -31,11 +29,13 @@
 					<div class="form-group">
 						<label for="name">Name:</label>
 						<input type="text" class="form-control" id="name" name="name" required>
+						<small class="text-danger"></small>
 					</div>
 
 					<div class="form-group">
 						<label for="price">Price:</label>
 						<input type="number" class="form-control" id="price" name="price" min="1" step="0.01" required>
+						<small class="text-danger"></small>
 					</div>
 
 					<div class="form-group">
@@ -61,6 +61,7 @@
 					<div class="form-group">
 						<label for="image">Image:</label>
 						<input type="file" name="image" id="image" class="form-control" required>
+						<small class="text-danger"></small>
 					</div>
 
 					<button type="button" id="btnAddItem" class="btn btn-primary">Add New Item</button>

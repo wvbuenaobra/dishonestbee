@@ -84,8 +84,8 @@
 								<td><?php echo $status ?></td>
 								<td>
 									<?php if($status == "Pending") { ?>
-										<a href="../controllers/complete_order.php?id=<?php echo $id ?>" class="btn btn-primary">Complete</a>
-										<a href="../controllers/cancel_order.php?id=<?php echo $id ?>" class="btn btn-danger">Cancel</a>
+										<a href="../controllers/complete_order.php?id=<?php echo $id ?>" class="btn btn-primary m-1">Complete</a>
+										<a href="../controllers/cancel_order.php?id=<?php echo $id ?>" class="btn btn-danger m-1">Cancel</a>
 									<?php } ?>
 								</td>
 							</tr>
