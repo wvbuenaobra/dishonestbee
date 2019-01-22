@@ -173,7 +173,7 @@ $(document).ready( () => {
 		let quantity = parseInt($(e.target).val());
 		let price = parseFloat($(e.target).parents('tr').find(".item_price").html());
 
-		//**should validate if negative num ang inenter**
+		//**validate if negative number entered for quantity**
 
 		subTotal = quantity * price;
 		$(e.target).parents('tr').find('.item_subtotal').html(subTotal.toFixed(2));

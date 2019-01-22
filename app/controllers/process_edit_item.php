@@ -11,8 +11,6 @@ $category_id = $_POST['category_id'];
 $sql = "UPDATE items SET name='$name', price='$price', description='$description', category_id='$category_id' WHERE id='$id'";
 $result = mysqli_query($conn, $sql);
 
-//**should be able to edit the picture sa assets folder!
-
 if(!$result) {
 	echo mysqli_error($conn);
 }

@@ -80,8 +80,9 @@
 
 									<!-- add to cart -->
 									<div class="card-footer">
-										<input type="number" class="form-control mb-1" name="cartnum" id="cartnum" value="1" min="0">
+										<input type="number" class="form-control mb-2" name="cartnum" id="cartnum" value="1" min="0">
 										<button type="submit" class="btn btn-block btn-outline-primary add-to-cart btn-sm" data-id="<?php echo $item['id'] ?>">Add to Cart</button>
+										<a href="./cart.php" type="button" class="btn btn-block btn-outline-secondary btn-sm">View My Cart</a>
 									</div>
 
 								</div>
