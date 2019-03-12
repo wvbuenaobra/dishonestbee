@@ -115,10 +115,8 @@ if($payment_mode_id == 1) { //for COD
 	    $mail->SMTPAuth = true;                               // Enable SMTP authentication
 	    $mail->Username = $staff_email;                       // SMTP username
 	    $mail->Password = 'disdis00!';                     // SMTP password
-	    //$mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
-	    $mail->SMTPSecure = 'ssl';                            // Enable TLS encryption, `ssl` also accepted
-	    //$mail->Port = 587;                                    // TCP port to connect to
-	    $mail->Port = 465;                                    // TCP port to connect to
+	    $mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
+	    $mail->Port = 587;                                    // TCP port to connect to
 
 	    //Recipients
 	    $mail->setFrom($staff_email, 'Dishonest Bee');
